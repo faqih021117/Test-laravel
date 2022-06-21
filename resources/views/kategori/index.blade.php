@@ -18,7 +18,7 @@
             </div>
         </div>
         <br>
-        <table class="table table-striped">
+        <table class="table striped">
             <thead>
                 <tr>
                     <th>ID</th>
@@ -31,10 +31,8 @@
                     <tr>
                         <td>{{$kategori['id_kategori']}} </td>
                         <td>{{$kategori['nama_kategori']}} </td>
-                        <td>
-                            <a href="{{action('KategoriProdukController@edit',$kategori['id_kategori'])}} " class="btn btn-warning">Edit</a>
-                        </td>
-                        <td>
+                        <td class="d-flex">
+                            <a href="{{action('KategoriProdukController@edit',$kategori['id_kategori'])}} " class="btn btn-warning mr-3">Edit</a>
                             <form action="{{action('KategoriProdukController@destroy',$kategori['id_kategori'])}} " method="post">
                                 {{ csrf_field() }}
                                 <input type="hidden" name="_method" value="DELETE">

@@ -24,7 +24,7 @@
             </form>
         </div>
         <br/>
-        <table class="table striped produk">
+        <table class="table striped">
             <thead>
                 <tr>
                     <th>ID</th>
@@ -45,7 +45,7 @@
                         <td>{{$produk['harga']}} </td>
                         <td>{{$produk['status']}} </td>
                         <td>{{$produk['tanggal']}} </td>
-                        <td class="d-flex r-3">
+                        <td class="d-flex mr-3">
                             <a href="{{action('ProdukController@edit',$produk['id_produk'])}} " class="btn btn-warning mr-3">Edit</a> 
                             <form action="{{action('ProdukController@destroy',$produk['id_produk'])}} " method="post">
                             {{ csrf_field() }}
